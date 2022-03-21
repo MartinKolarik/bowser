@@ -25,7 +25,7 @@
 
 import Utils from './utils.js';
 
-const commonVersionIdentifier = /version\/(\d+(\.?_?\d+)+)/i;
+const commonVersionIdentifier = /\bversion\/(\d+(\.?_?\d+)+)/i;
 
 const browsersList = [
   /* Googlebot */
