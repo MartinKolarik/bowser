@@ -685,8 +685,8 @@ const browsersList = [
        * in order to decide what regexp exactly we want to apply
        * (as there is a specific decision based on that conclusion)
        */
-      const regexpWithoutDeviceSpec = /^(.*?)\/(.*) /;
-      const regexpWithDeviceSpec = /^(.*?)\/(.*)[ \t]\((.*)/;
+      const regexpWithoutDeviceSpec = /^(.*?)\/(.*?)[; \t]/;
+      const regexpWithDeviceSpec = /^(.*?)\/(.*?)[; \t]\((.*)/;
       const hasDeviceSpec = ua.search('\\(') !== -1;
       const regexp = hasDeviceSpec ? regexpWithDeviceSpec : regexpWithoutDeviceSpec;
       return {
